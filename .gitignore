@@ -1,0 +1,12 @@
+# Build artifacts
+bin/
+obj/
+
+# User/editor files
+.vscode/
+*.user
+*.suo
+
+# OS files
+.DS_Store
+Thumbs.db
