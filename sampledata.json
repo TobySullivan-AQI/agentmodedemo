@@ -1,0 +1,72 @@
+[
+  {
+    "FirstName": "Avery",
+    "LastName": "Johnson",
+    "HiringDate": "2019-03-11",
+    "Department": "Engineering",
+    "Job Title": "Senior Software Engineer"
+  },
+  {
+    "FirstName": "Maya",
+    "LastName": "Patel",
+    "HiringDate": "2020-07-20",
+    "Department": "Marketing",
+    "Job Title": "Digital Marketing Manager"
+  },
+  {
+    "FirstName": "Carlos",
+    "LastName": "Ramirez",
+    "HiringDate": "2018-11-05",
+    "Department": "Sales",
+    "Job Title": "Account Executive"
+  },
+  {
+    "FirstName": "Nina",
+    "LastName": "Brooks",
+    "HiringDate": "2021-01-15",
+    "Department": "Human Resources",
+    "Job Title": "HR Business Partner"
+  },
+  {
+    "FirstName": "Ethan",
+    "LastName": "Nguyen",
+    "HiringDate": "2017-09-28",
+    "Department": "Finance",
+    "Job Title": "Financial Analyst"
+  },
+  {
+    "FirstName": "Lena",
+    "LastName": "Fischer",
+    "HiringDate": "2022-05-09",
+    "Department": "Customer Success",
+    "Job Title": "Customer Success Specialist"
+  },
+  {
+    "FirstName": "Jordan",
+    "LastName": "Lee",
+    "HiringDate": "2016-12-02",
+    "Department": "Operations",
+    "Job Title": "Operations Manager"
+  },
+  {
+    "FirstName": "Priya",
+    "LastName": "Sharma",
+    "HiringDate": "2023-02-13",
+    "Department": "Product",
+    "Job Title": "Product Designer"
+  },
+  {
+    "FirstName": "Marcus",
+    "LastName": "Davis",
+    "HiringDate": "2019-08-26",
+    "Department": "IT",
+    "Job Title": "Systems Administrator"
+  },
+  {
+    "FirstName": "Sofia",
+    "LastName": "Martinez",
+    "HiringDate": "2024-04-01",
+    "Department": "Legal",
+    "Job Title": "Compliance Analyst"
+  }
+]
