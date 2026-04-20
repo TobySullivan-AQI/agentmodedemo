@@ -1,0 +1,72 @@
+@model agentmodedemo.Models.EmployeeRecord
+
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<style>
+    .details-card {
+        max-width: 760px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #f7f9ff, #edf4ff);
+        border: 1px solid #dbe8ff;
+        border-radius: 16px;
+        box-shadow: 0 12px 24px rgba(20, 54, 102, 0.15);
+        overflow: hidden;
+    }
+
+    .details-header {
+        background: #1d3557;
+        color: #ffffff;
+        padding: 18px 24px;
+    }
+
+    .details-body {
+        padding: 20px 24px;
+    }
+
+    .details-grid {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 10px 16px;
+        align-items: center;
+    }
+
+    .details-label {
+        font-weight: 700;
+        color: #355070;
+    }
+
+    .details-value {
+        color: #1f2f46;
+    }
+</style>
+
+<section class="details-card mt-3">
+    <header class="details-header">
+        <h1 class="h4 mb-0">@Model.FirstName @Model.LastName</h1>
+    </header>
+
+    <div class="details-body">
+        <div class="details-grid">
+            <div class="details-label">First Name</div>
+            <div class="details-value">@Model.FirstName</div>
+
+            <div class="details-label">Last Name</div>
+            <div class="details-value">@Model.LastName</div>
+
+            <div class="details-label">Hiring Date</div>
+            <div class="details-value">@Model.HiringDate.ToString("yyyy-MM-dd")</div>
+
+            <div class="details-label">Department</div>
+            <div class="details-value">@Model.Department</div>
+
+            <div class="details-label">Job Title</div>
+            <div class="details-value">@Model.JobTitle</div>
+        </div>
+
+        <div class="mt-4">
+            <a asp-action="Privacy" class="btn btn-outline-secondary">Back to Employee Directory</a>
+        </div>
+    </div>
+</section>

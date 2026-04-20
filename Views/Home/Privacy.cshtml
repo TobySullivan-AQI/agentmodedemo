@@ -52,28 +52,29 @@
 
 <section class="employee-page">
     <h1 class="employee-title">@ViewData["Title"]</h1>
-    <p class="employee-subtitle">Sample employee records loaded from sampledata.json</p>
+    <p class="employee-subtitle">Select an employee to view complete details.</p>
 
     <div class="table-responsive employee-table">
         <table class="table table-striped align-middle">
             <thead>
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Hiring Date</th>
+                    <th>Name</th>
                     <th>Department</th>
-                    <th>Job Title</th>
+                    <th>Details</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var employee in Model)
+                @for (var i = 0; i < Model.Count; i++)
                 {
+                    var employee = Model[i];
                     <tr>
-                        <td>@employee.FirstName</td>
-                        <td>@employee.LastName</td>
-                        <td>@employee.HiringDate.ToString("yyyy-MM-dd")</td>
+                        <td>@employee.FirstName @employee.LastName</td>
                         <td>@employee.Department</td>
-                        <td>@employee.JobTitle</td>
+                        <td>
+                            <a asp-action="EmployeeDetails" asp-route-id="@i" class="btn btn-sm btn-outline-primary">
+                                View Details
+                            </a>
+                        </td>
                     </tr>
                 }
             </tbody>

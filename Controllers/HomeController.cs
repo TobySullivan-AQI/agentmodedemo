@@ -21,22 +21,38 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
-        var dataPath = Path.Combine(_environment.ContentRootPath, "sampledata.json");
+        var employees = LoadEmployees();
+        return View(employees);
+    }
 
-        if (!System.IO.File.Exists(dataPath))
+    public IActionResult EmployeeDetails(int id)
+    {
+        var employees = LoadEmployees();
+
+        if (id < 0 || id >= employees.Count)
         {
-            return View(new List<EmployeeRecord>());
+            return NotFound();
         }
 
-        var rawJson = System.IO.File.ReadAllText(dataPath);
-        var employees = JsonSerializer.Deserialize<List<EmployeeRecord>>(rawJson) ?? new List<EmployeeRecord>();
-
-        return View(employees);
+        return View(employees[id]);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    private List<EmployeeRecord> LoadEmployees()
+    {
+        var dataPath = Path.Combine(_environment.ContentRootPath, "sampledata.json");
+
+        if (!System.IO.File.Exists(dataPath))
+        {
+            return new List<EmployeeRecord>();
+        }
+
+        var rawJson = System.IO.File.ReadAllText(dataPath);
+        return JsonSerializer.Deserialize<List<EmployeeRecord>>(rawJson) ?? new List<EmployeeRecord>();
     }
 }
