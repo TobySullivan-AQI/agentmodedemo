@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "O8aiLBHzZRI=",
+  "success": true,
+  "projectFilePath": "/workspaces/agentmodedemo/agentmodedemo.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/azure.ai.openai/2.1.0/azure.ai.openai.2.1.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/azure.core/1.53.0/azure.core.1.53.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/azure.identity/1.21.0/azure.identity.1.21.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.bcl.asyncinterfaces/10.0.3/microsoft.bcl.asyncinterfaces.10.0.3.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.identity.client/4.83.1/microsoft.identity.client.4.83.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.identity.client.extensions.msal/4.83.1/microsoft.identity.client.extensions.msal.4.83.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.identitymodel.abstractions/8.14.0/microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/openai/2.1.0/openai.2.1.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.clientmodel/1.10.0/system.clientmodel.1.10.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.memory.data/10.0.3/system.memory.data.10.0.3.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.security.cryptography.protecteddata/4.5.0/system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
