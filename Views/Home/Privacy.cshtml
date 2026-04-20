@@ -25,6 +25,10 @@
         margin-bottom: 1.25rem;
     }
 
+    .search-row {
+        margin-bottom: 1rem;
+    }
+
     .employee-table {
         overflow: hidden;
         border-radius: 12px;
@@ -54,6 +58,17 @@
     <h1 class="employee-title">@ViewData["Title"]</h1>
     <p class="employee-subtitle">Select an employee to view complete details.</p>
 
+    <div class="search-row">
+        <label for="employeeSearch" class="form-label fw-semibold">Search by name</label>
+        <input
+            id="employeeSearch"
+            type="text"
+            class="form-control"
+            placeholder="Type a first or last name..."
+            autocomplete="off"
+        />
+    </div>
+
     <div class="table-responsive employee-table">
         <table class="table table-striped align-middle">
             <thead>
@@ -68,7 +83,7 @@
                 {
                     var employee = Model[i];
                     <tr>
-                        <td>@employee.FirstName @employee.LastName</td>
+                        <td class="employee-name">@employee.FirstName @employee.LastName</td>
                         <td>@employee.Department</td>
                         <td>
                             <a asp-action="EmployeeDetails" asp-route-id="@i" class="btn btn-sm btn-outline-primary">
@@ -81,3 +96,25 @@
         </table>
     </div>
 </section>
+
+<script>
+    (function () {
+        const searchInput = document.getElementById("employeeSearch");
+        if (!searchInput) {
+            return;
+        }
+
+        const rows = Array.from(document.querySelectorAll(".employee-table tbody tr"));
+
+        searchInput.addEventListener("input", function () {
+            const term = searchInput.value.trim().toLowerCase();
+
+            rows.forEach(function (row) {
+                const nameCell = row.querySelector(".employee-name");
+                const employeeName = (nameCell?.textContent ?? "").toLowerCase();
+                const isMatch = employeeName.includes(term);
+                row.style.display = isMatch ? "" : "none";
+            });
+        });
+    })();
+</script>
